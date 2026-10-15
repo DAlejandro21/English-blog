@@ -1,0 +1,504 @@
+/* ==========================================================================
+   DevLog & Portfolio - Estilos Generales y Estructura
+   ========================================================================== */
+
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1e3a8a;
+  --bg-color: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  
+  --accent-blue: #2563eb;
+  --accent-emerald: #059669;
+  --accent-purple: #7c3aed;
+  --accent-golden_yellow: #e2c44b;
+  --accent-turquois_green: #5ee0c1;
+  --accent-bright-lime-green: #84de06;
+  --accent-dark-orange: #aa7452;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.65;
+  font-size: 15px;
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Header del Blog
+   ========================================================================== */
+.blog-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #ffffff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(147, 197, 253, 0.4);
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.blog-header h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.header-subtitle {
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  margin-bottom: 22px;
+}
+
+.author-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.meta-value {
+  font-size: 0.88rem;
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Tarjetas de Artículos (Post Cards)
+   ========================================================================== */
+.post-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 26px 28px;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07);
+}
+
+.post-blue { border-top: 5px solid var(--accent-blue); }
+.post-emerald { border-top: 5px solid var(--accent-emerald); }
+.post-purple { border-top: 5px solid var(--accent-purple); }
+.post-golden_yellow { border-top: 5px solid var(--accent-golden_yellow); }
+.post-turquois_green { border-top: 5px solid var(--accent-turquois_green); }
+.post-bright-lime-green { border-top: 5px solid var(--accent-bright-lime-green); }
+.post-dark-orange { border-top: 5px solid var(--accent-dark-orange); }
+.post-amber { border-top: 5px solid var(--accent-amber); }
+.post-rose { border-top: 5px solid var(--accent-rose); }
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.category-badge {
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.cat-blue { background-color: #eff6ff; color: #1d4ed8; }
+.cat-emerald { background-color: #f0fdf4; color: #15803d; }
+.cat-purple { background-color: #faf5ff; color: #6b21a8; }
+.cat-golden_yellow { background-color: #fdf9ea; color: #e2c44b; }
+.cat-turquois_green { background-color: #e1f7f2; color: #5ee0c1; }
+.cat-bright-lime-green { background-color: #84de0627; color: #84de06; }
+.cat-dark-orange { background-color: #aa74523b; color: #aa7452; }
+.cat-amber { background-color: #d9770636; color: #d97706; }
+.cat-rose { background-color: #e11d4738; color: #e11d48; }
+
+
+.post-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+
+.post-body p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+/* ==========================================================================
+   Citas Destacadas (Blockquotes)
+   ========================================================================== */
+.highlight-quote {
+  padding: 12px 18px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.quote-blue {
+  background-color: #f0f7ff;
+  border-left: 4px solid var(--accent-blue);
+  color: #1e3a8a;
+}
+
+.quote-purple {
+  background-color: #fbf7ff;
+  border-left: 4px solid var(--accent-purple);
+  color: #581c87;
+}
+
+.quote-amber {
+  background-color: #fffdf5;
+  border-left: 4px solid var(--accent-amber);
+  color: #78350f;
+  margin: 16px 0;
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.quote-author {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  color: #92400e;
+}
+
+.quote-rose {
+  background-color: #fff1f2;
+  border-left: 4px solid var(--accent-rose);
+  color: #9f1239;
+  padding: 12px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   Carta de Presentación (Letter Box)
+   ========================================================================== */
+.letter-box {
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin-top: 10px;
+}
+
+.letter-header {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin: 14px 0;
+  font-size: 0.88rem;
+}
+
+.contact-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Cuadrícula Contextual (Academic & Work Context)
+   ========================================================================== */
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.context-col {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.context-col-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.context-col-header h3 {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.context-col-header .icon {
+  font-size: 1.2rem;
+}
+
+.context-list {
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.context-list li {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.blog-footer {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 20px;
+}
+
+.footer-sub {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  margin: 18px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ==========================================================================
+   Contenedor de Audio
+   ========================================================================== */
+.audio-container {
+  background-color: #faf5ff;
+  border: 1px solid #e9d5ff;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0 20px 0;
+}
+
+.audio-label {
+  font-size: 0.88rem;
+  color: #6b21a8;
+  margin-bottom: 8px !important;
+}
+
+.audio-container audio {
+  width: 100%;
+  height: 42px;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* ==========================================================================
+   Contenedor e Imagen Responsiva
+   ========================================================================== */
+.image-container {
+  margin: 18px 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.image-container figcaption {
+  font-size: 0.82rem;
+  color: var(--text-muted, #64748b);
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color, #e2e8f0);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Caja de acciones y etiquetas */
+.action-box {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-top: 18px;
+}
+
+.action-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark, #0f172a);
+  margin-bottom: 12px;
+}
+
+.action-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-item {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Tarjeta de gramática: Reported Speech */
+.grammar-card {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-top: 20px;
+}
+
+.grammar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.grammar-header h3 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0;
+}
+
+.grammar-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.speech-pair {
+  background-color: #ffffff;
+  border-left: 3px solid var(--accent-rose);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.speech-pair p {
+  margin: 0 0 4px 0 !important;
+}
+
+.speech-pair .reported {
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 0 !important;
+}
